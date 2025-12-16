@@ -197,7 +197,16 @@ const saveProduct = (e:FormDataEvent)=>{e.preventDefault()
               </div>
               <div className="col-12">
                 <button type="submit" 
-                onClick={saveProduct}
+                onClick={()=>{
+                    const product = {title,description,stock,salesPrice,purchasePrice};
+
+    axios.post("https://e-commerce-yv5m.onrender.com/store/add/product",product).then(
+        (res)=>{
+            console.log(res.data);
+            goToProducts("/products");
+        }
+    ); 
+                }}
                 className="btn btn-primary btn-block text-uppercase">Add Product Now</button>
               </div>
             
