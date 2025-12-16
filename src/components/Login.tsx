@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import '../css/bootstrap.min.css'
 import '../css/fontawesome.min.css'
 import '../css/templatemo-style.css'

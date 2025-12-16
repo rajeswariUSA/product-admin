@@ -1,10 +1,10 @@
 import axios from 'axios';
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
 export default function AddProduct() {
 
-    const goToProducts = useNavigate('');
+    const goToProducts = useNavigate();
 
     const [title,setTitle] = useState('');
     const [description,setDescription] = useState('');
