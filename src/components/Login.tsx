@@ -6,7 +6,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 export default function Login() {
 
-    const goToHome = useNavigate('');
+    const goToHome = useNavigate();
 const [userName,setUserName] = useState('');
 const [password,setPassword] = useState('');
 
@@ -15,20 +15,6 @@ const setUserNameVal = (e:any)=>{setUserName(e.target.value)}
 const setPasswordVal = (e:any)=>{setPassword(e.target.value)}
 
 
-const checkUser = (e:FormDataEvent)=>{
-    console.log("hello")
-    e.preventDefault();
-    console.log("username--->"+userName);
-    console.log("password--->"+password);
-    axios.get("https://e-commerce-yv5m.onrender.com/store/users/check?name="+userName
-        +"&password="+password).then(
-        (res)=>{
-            console.log(res.data);
-            goToHome("/home")
-        }
-    );
-
-}
 
 
   return (
