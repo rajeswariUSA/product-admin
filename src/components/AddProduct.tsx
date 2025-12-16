@@ -36,18 +36,7 @@ export default function AddProduct() {
         setSalesPrice(e.target.value);
     }
 
-const saveProduct = (e:FormDataEvent)=>{e.preventDefault()
-   
 
-    const product = {title,description,stock,salesPrice,purchasePrice};
-
-    axios.post("https://e-commerce-yv5m.onrender.com/store/add/product",product).then(
-        (res)=>{
-            console.log(res.data);
-            goToProducts("/products");
-        }
-    );
-}
   return (
     <div>
 
